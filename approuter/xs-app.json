@@ -1,0 +1,18 @@
+{
+    "welcomeFile": "/app/risks/webapp/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/app/(.*)$",
+            "target": "$1",
+            "localDir": "resources",
+            "cacheControl": "no-cache"
+        },
+        {
+            "source": "^/service/(.*)$",
+            "destination": "srv-binding",
+            "authenticationType": "xsuaa"
+        }
+
+    ]
+}
